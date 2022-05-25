@@ -3,6 +3,30 @@
     padding: 0;
 }
 
+.about-us-header{
+    display: flex;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    background-color: red;
+    margin: 10px 0px;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+}
+
+.card-container {
+    display:flex;
+}
+
 .card {
     width: 18rem;
 }
+
+
+
+

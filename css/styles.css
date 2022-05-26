@@ -12,15 +12,29 @@ body {
 }
 
 h1 {
+   
     text-align: center;
     color: white;
     background-color: red;
     margin: 10px 0px;
 }
 
-.logo {
-    height: 60px;
-    width: 235px;
+h2 {
+    text-align: center;
+    color: white;
+    background-color: red;
+    margin: 10px 0px;
+}
+
+p {
+    font-family: Roboto;
+    font-size: 20px;
+
+}
+
+.navbar-brand img{
+    height: 75px;
+    width: auto;
 }
 
 .card-container {
@@ -31,11 +45,11 @@ h1 {
     width: 18rem;
 }
 
-#aboutus {
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: larger;
+.card-img-top {
+    width: 286.4px;
+    height: 286.4px;
+   
+    
 }
-
-
 
 

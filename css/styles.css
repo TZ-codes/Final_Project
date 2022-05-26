@@ -28,8 +28,8 @@ p {
 
 }
 
-.logo {
-    height: 100px;
+.navbar-brand img{
+    height: 75px;
     width: auto;
 }
 
@@ -42,8 +42,8 @@ p {
 }
 
 .card-img-top {
-    width: 100%;
-    height: auto;
+    width: 286.4px;
+    height: 286.4px;
    
     
 }

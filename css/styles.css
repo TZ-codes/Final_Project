@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body {
+    background-color: whitesmoke;
+}
+
 .about-us-header{
     display: flex;
 }
@@ -15,8 +19,8 @@ h1 {
 }
 
 .logo {
-    height: 100px;
-    width: auto;
+    height: 60px;
+    width: 235px;
 }
 
 .card-container {
@@ -25,6 +29,11 @@ h1 {
 
 .card {
     width: 18rem;
+}
+
+#aboutus {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: larger;
 }
 
 

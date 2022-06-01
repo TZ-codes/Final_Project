@@ -52,4 +52,24 @@ p {
     
 }
 
+/* Products Page */
+#carousel1 {
+    font-family: 'Prompt', sans-serif;
+    text-transform: uppercase;
+}
+
+#carousel2 {
+    font-family: 'Prompt', sans-serif;
+    text-transform: uppercase;
+}
+
+#carousel3 {
+    font-family: 'Prompt', sans-serif;
+    text-transform: uppercase;
+}
+
+
+#button {
+    font-family: 'Prompt', sans-serif;
+}
 

@@ -3,6 +3,7 @@
     padding: 0;
 }
 
+
 .about-us-header{
     display: flex;
 }
@@ -30,6 +31,7 @@ p {
 .navbar-brand img{
     height: 75px;
     width: auto;
+    border-radius: 50%;
 }
 
 .card-container {
@@ -45,4 +47,13 @@ p {
     height: 286.4px;
 }
 
+.card {
+    margin: auto;
+    width: 50%;
+    width: 28rem;
+}
 
+.card-img-top {
+    width: 28rem;
+    height: 20rem;
+}

@@ -60,3 +60,35 @@ footer {
     background-color: black;
     justify-content: space-between;
 }
+
+
+/* Products Page */
+
+.products {
+    background-color: gainsboro;
+}
+
+#carousel1 {
+    font-family: 'Prompt', sans-serif;
+    text-transform: uppercase;
+}
+
+#carousel2 {
+    font-family: 'Prompt', sans-serif;
+    text-transform: uppercase;
+}
+
+#carousel3 {
+    font-family: 'Prompt', sans-serif;
+    text-transform: uppercase;
+}
+
+.carousel-caption {
+    text-shadow: 2px 2px 0 black; 
+}
+
+
+#button {
+    font-family: 'Prompt', sans-serif;
+}
+

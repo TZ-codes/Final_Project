@@ -1,44 +1,33 @@
-// Create a ItemsController class
-class productsController {
-    // Set up the items and currentId property in the contructor
-    constructor(currentId = 0) {
+class ProductsController {
+    constructor(currentId=0) {
         this.items = [];
         this.currentId = currentId;
-    }
+    };
 
-    // Create the addItem method
-    addItem(name, description,imageUrl) {
+    addItem(name, description,imageUrl, createdDate=Date()) {
         const item = {
-            // Increment the currentId property
             id: this.currentId++,
             name: name,
             description: description,
-            imageUrl: imageUrl
+            imageUrl: imageUrl,
+            createdDate: createdDate
         };
-
-        // Push the item to the items property
+        console.log(item);
         this.items.push(item);
-    }
-}
+    };
+};
 
-const item1 = new productsController(this.items)
+const products = new ProductsController()
 
-console.log(item1);
+products.addItem('4kg kettlebell', '4kg kettlebell', '../images/gymEquipment/4kg-Kettlebell.png', '06/26/2022');
+products.addItem('8kg-kettlebell', '8kg-kettlebell', '../images/gymEquipment/8kg-Kettlebell.png', '06/26/2022');
+products.addItem('12kg-kettlebell', '12kg-kettlebell', '../images/gymEquipment/12kg-Kettlebell.png', '06/26/2022');
+products.addItem('24kg-kettlebell', '24kg-kettlebell', '../images/gymEquipment/24kg-Kettlebell.png', '06/26/2022');
+products.addItem('32kg-kettlebell', '32kg-kettlebell', '../images/gymEquipment/32kg-Kettlebell.png', '06/26/2022');
+products.addItem('40kg-kettlebell', '40kg-kettlebell', '../images/gymEquipment/40kg-Kettlebell.png', '06/26/2022');
 
-// const equpiment1 = {
-//     id: 1,
-//     name:
-//     description:
-//     img: 
-//     createdAt: 
-// };
 
-// const equipment2 = {
-//     id: 2,
-//     name:
-//     description: 
-//     img:
-//     createdAt: 
+
 
 
 

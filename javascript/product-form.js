@@ -8,12 +8,12 @@ const newProductForm = document.querySelector('#newProductForm');
 newProductForm.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    //test code
-    let statement = document.createElement('statement');
-    statement.setAttribute('id', 'state');
-    statement.innerHTML = `Oh good, this code is working.`;
-    statement.style.color = 'black';
-    document.body.appendChild(statement);
+    // //test code
+    // let statement = document.createElement('statement');
+    // statement.setAttribute('id', 'state');
+    // statement.innerHTML = `Oh good, this code is working.`;
+    // statement.style.color = 'black';
+    // document.body.appendChild(statement);
 
     // inputs
     const newProductName = document.querySelector('#newProductName');

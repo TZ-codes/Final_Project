@@ -1,9 +1,6 @@
 // New instance of productController 
 const productController1 = new ProductController(0);
 
-
-
-
 // add product card
 const addProductCard = product => {
     const productHTML = '<div class="col">\n' +
@@ -21,25 +18,25 @@ const addProductCard = product => {
 
 // connect ProductController class and products.js with local storage
 const loadStorageSampleData = () => {
-    if(!localStorage.getProduct("products")){
+    if(!localStorage.getItem("products")){
         const sampleProducts = [{'name':'creatine',
             'img':'',
             'description':'Creatine, get your pump on!'},
             {'name':'protein',
             'img':'',
             'description':'Protein, get your growth on!'}];
-            localStorage.setProduct("products", JSON.stringify(sampleProducts));
+            localStorage.setItem("products", JSON.stringify(sampleProducts));
     };
 };
 
 const loadCardsListFromProductController = () => {
-    for(let i = 0, size = ProductController.products.length; i < size ; i++){
-        const product = ProductController.products[i];
+    for(let i = 0, size = productController1.products.length; i < size ; i++){
+        const product = productController1.products[i];
         addProductCard(product);
     }
 }
 
 loadStorageSampleData();
-ProductController.loadProductsFromLocalStorage();
+productController1.loadProductsFromLocalStorage();
 loadCardsListFromProductController();
 

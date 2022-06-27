@@ -33,3 +33,4 @@ products.addItem('40kg-kettlebell', '40kg-kettlebell', '../images/gymEquipment/4
 
 
 
+

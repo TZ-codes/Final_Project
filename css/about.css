@@ -1,72 +1,32 @@
-* {
-    margin: 0;
-    padding: 0;
+/* AboutUs Page - aboutus-card*/
+
+#aboutus-cards {
+    padding: 30px 0;
 
 }
-
-/* index */
-
-h1 {
-    text-align: center;
-    color: black;
-    margin: 10px 0px;
-}
-
-h2 {
-    text-align: center;
+#aboutus-cards h1{
     color: white;
     background-color: red;
-    margin: 10px 0px;
+    font-size: 2rem;
+    padding-bottom: 5px;
 }
 
-p {
-    font-size: 18px;
-}
-
-.card {
-    margin: auto;
-    width: 50%;
-    width: 40rem;
-}
-
-.card-img-top {
-    /* width: 28rem;
-    height: 20rem; */
-}
-
-.card-title {
-    font-family: 'Prompt', sans-serif;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-
-
-.card-body {
-    margin-bottom: 5px;
-}
-
-.card-text {
-    font-family: 'Prompt', sans-serif;
-    font-size: 1.5em;
-
-}
-
-.btn {
+#aboutus-cards h2{
+    color: white;
     background-color: red;
-    color: white;
-    text-transform: uppercase;
-    border: red;
-    
+    font-size: 2rem;
+    padding-bottom: 5px;
 }
 
-.btn:hover {
-    background-color: black;
-    color: white;
-    transition: 0.7s;
-    border: black;
-  
+.title {
+    text-align: center;
+    padding: 25px 0;
 }
+
+.title p {
+    text-align: center;
+}
+
 
 /* Navigation Bar */
 
@@ -95,7 +55,8 @@ footer {
     padding: 15px 15%;
     text-align: center;
     margin: 0 auto;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
+    position: absolute;
 }
 
 .footer-col1 {
@@ -163,37 +124,3 @@ footer {
 .footer-col2 a:hover {
     color: red;
 }
-
-
-
-
-/* Products Page */
-
-.products {
-    background-color: gainsboro;
-}
-
-#carousel1 {
-    font-family: 'Prompt', sans-serif;
-    text-transform: uppercase;
-}
-
-#carousel2 {
-    font-family: 'Prompt', sans-serif;
-    text-transform: uppercase;
-}
-
-#carousel3 {
-    font-family: 'Prompt', sans-serif;
-    text-transform: uppercase;
-}
-
-.carousel-caption {
-    text-shadow: 2px 2px 0 black; 
-}
-
-
-#button {
-    font-family: 'Prompt', sans-serif;
-}
-

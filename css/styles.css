@@ -29,11 +29,6 @@ p {
     width: 40rem;
 }
 
-.card-img-top {
-    /* width: 28rem;
-    height: 20rem; */
-}
-
 .card-title {
     font-family: 'Prompt', sans-serif;
     text-transform: uppercase;
@@ -197,3 +192,15 @@ footer {
     font-family: 'Prompt', sans-serif;
 }
 
+/* product-form page*/
+.form-label {
+    font-size: 20px;
+}
+
+#prodFormFooter {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+}

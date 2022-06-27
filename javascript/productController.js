@@ -1,16 +1,6 @@
-/*class productController {
-    constructor (item) {
-        this.item = [];
-    }
-};
 
 
-const item1 = new productController(this.item)
 
-console.log(item1);*/
-
-
-// Haley's Code
 class ProductController {
     constructor (currentId = 0) {
         this.products = [];

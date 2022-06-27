@@ -1,36 +1,30 @@
-class ProductsController {
-    constructor(currentId=0) {
-        this.items = [];
+class ProductController {
+    constructor (currentId = 0) {
+        this.products = [];
         this.currentId = currentId;
-    };
-
-    addItem(name, description,imageUrl, createdDate=Date()) {
-        const item = {
+    }
+    
+    addProduct(name, description, img, createdAt=Date()) {
+        const product = {
             id: this.currentId++,
             name: name,
             description: description,
-            imageUrl: imageUrl,
-            createdDate: createdDate
+            img: img,
+            createdAt: createdAt
         };
-        console.log(item);
-        this.items.push(item);
-    };
-};
+        this.products.push(product);
 
-const products = new ProductsController()
+        localStorage.setProduct("products", JSON.stringify(this.products));
+    }
 
-products.addItem('4kg kettlebell', '4kg kettlebell', '../images/gymEquipment/4kg-Kettlebell.png', '06/26/2022');
-products.addItem('8kg-kettlebell', '8kg-kettlebell', '../images/gymEquipment/8kg-Kettlebell.png', '06/26/2022');
-products.addItem('12kg-kettlebell', '12kg-kettlebell', '../images/gymEquipment/12kg-Kettlebell.png', '06/26/2022');
-products.addItem('24kg-kettlebell', '24kg-kettlebell', '../images/gymEquipment/24kg-Kettlebell.png', '06/26/2022');
-products.addItem('32kg-kettlebell', '32kg-kettlebell', '../images/gymEquipment/32kg-Kettlebell.png', '06/26/2022');
-products.addItem('40kg-kettlebell', '40kg-kettlebell', '../images/gymEquipment/40kg-Kettlebell.png', '06/26/2022');
-
-
-
-
-
-
-
-
-
+    loadProductsFromLocalStorage() {
+        const storageProducts = localStorage.getProduct("products")
+        if (storageProducts) {
+            const products = JSON.parse(storageProducts)
+            for (let i = 0, size = products.length; i < size; i++) {
+                const products = products[i];
+                this.products.push(product);           
+            }
+        }
+    }
+}

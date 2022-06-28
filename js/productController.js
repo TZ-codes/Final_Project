@@ -18,7 +18,8 @@ class ProductController {
     loadItemsFromLocalStorage = () => {
         const storageProducts = localStorage.getItem('products')
         if (storageProducts) {
-            this.products = JSON.parse(storageProducts);
+            this.products.push(JSON.parse(storageProducts));
+            console.log(this.products)
         };
     };
 };

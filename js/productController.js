@@ -13,13 +13,17 @@ class ProductController {
             createdAt: createdAt
         };
         this.products.push(product);
+        localStorage.setItem('products', JSON.stringify(this.products));
+
     };
     
     loadItemsFromLocalStorage = () => {
-        const storageProducts = localStorage.getItem('products')
+        let storageProducts = localStorage.getItem('products')
         if (storageProducts) {
-            this.products.push(JSON.parse(storageProducts));
             console.log(this.products)
+            storageProducts = JSON.parse(storageProducts);
+            // this.products.push(JSON.parse(storageProducts));
+            storageProducts.forEach(product => this.products.push(product));
         };
     };
 };

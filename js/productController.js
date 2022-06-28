@@ -16,7 +16,9 @@ class ProductController {
     };
 };
 
-
-const productOne = new ProductController();
-productOne.addItem('Tyler', 'shoot me in the face please',);
-console.log(productOne);
+const loadItemsFromLocalStorage = () => {
+    const storageProducts = localStorage.getItem('products')
+    if (storageProducts) {
+        const products = JSON.parse(storageProducts);
+    }
+};

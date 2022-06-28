@@ -1,10 +1,4 @@
-const product = {
-    id: 1,
-    name: 'kettlebell',
-    description: 'sample description',
-    imageURL: '../images/gymEquipment/4kg-Kettlebell.png',
-    createdAt: Date()
-};
+const productController = new ProductController();
 
 const addProductCard = product => {
     productHTML = `<div class="card" style="width: 18rem;">
@@ -14,7 +8,27 @@ const addProductCard = product => {
         <p class="card-text">${product.description}</p>
     </div>
 </div>`;
-return productHTML;
+const productContainer = document.querySelector('#list-products');
+productContainer.innerHTML += productHTML;
 };
 
-console.log(addProductCard(product));
+const localStorageSampleData = () => {
+    if(!localStorage.getItem('products')){
+        const sampleProduct = [{'name':'Loremmmmm',
+        'img':'../images/gymEquipment/4kg-Kettlebell.png',
+        'description':'Lorem ipsum dolor sit amet'},
+        {'name':'Lorem',
+        'img':'../images/gymEquipment/10kg-dumbbell.png',
+        'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, repellat!'}] 
+    }
+    localStorage.setItem("products", JSON.stringify(sampleProduct));
+};
+
+const loadsCardsListFromItemsController = () => {
+    for(let i = 0; i < productController.products.length; i++) {
+        const product = productController.products[i];
+        addProductCard(product);
+    }
+};
+
+localStorageSampleData();

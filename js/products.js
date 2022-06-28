@@ -1,3 +1,4 @@
+console.log('products.js first line')
 const productController = new ProductController();
 
 const addProductCard = product => {
@@ -13,6 +14,7 @@ productContainer.innerHTML += productHTML;
 };
 
 const localStorageSampleData = () => {
+    console.log('localStorageSampleData')
     if(!localStorage.getItem('products')){
         const sampleProduct = [{'name':'Loremmmmm',
         'img':'../images/gymEquipment/4kg-Kettlebell.png',
@@ -20,8 +22,9 @@ const localStorageSampleData = () => {
         {'name':'Lorem',
         'img':'../images/gymEquipment/10kg-dumbbell.png',
         'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, repellat!'}] 
+        console.log(sampleProduct);
+        localStorage.setItem("products", JSON.stringify(sampleProduct));
     }
-    localStorage.setItem("products", JSON.stringify(sampleProduct));
 };
 
 const loadsCardsListFromItemsController = () => {
@@ -32,3 +35,4 @@ const loadsCardsListFromItemsController = () => {
 };
 
 localStorageSampleData();
+

@@ -12,22 +12,26 @@ class ProductController {
             imageURL: imageURL,
             createdAt: createdAt
         };
-        this.products.push(product);
-        localStorage.setItem('products', JSON.stringify(this.products));
 
+        this.products.push(product);
+        
+        if (localStorage.getItem('products')) {
+            const products = JSON.parse(localStorage.getItem('products'));
+            products.push(product);
+            localStorage.setItem('products', JSON.stringify(products));
+        };
     };
     
     loadItemsFromLocalStorage = () => {
-        let storageProducts = localStorage.getItem('products')
+        const storageProducts = localStorage.getItem('products')
         if (storageProducts) {
-            console.log(this.products)
-            storageProducts = JSON.parse(storageProducts);
-            // this.products.push(JSON.parse(storageProducts));
-            storageProducts.forEach(product => this.products.push(product));
+            const products = JSON.parse(storageProducts);
+            products.forEach(product => this.products.push(product));
         };
     };
 };
 
-
-
 export {ProductController};
+
+
+

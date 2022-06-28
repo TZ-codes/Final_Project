@@ -15,7 +15,7 @@ productContainer.innerHTML += productHTML;
 };
 
 const localStorageSampleData = () => {
-    console.log('localStorageSampleData')
+    // console.log('localStorageSampleData')
     if(!localStorage.getItem('products')){
         const sampleProduct = [{'name':'Loremmmmm',
         'imageURL':'./images/gymEquipment/4kg-Kettlebell.png',
@@ -32,7 +32,6 @@ const loadsCardsListFromItemsController = () => {
     console.log(productController.products.length)
     for(let i = 0; i < productController.products.length; i++) {
         const product = productController.products[i];
-        console.log(4);
         addProductCard(product);
     }
 };
@@ -41,3 +40,5 @@ localStorageSampleData();
 productController.loadItemsFromLocalStorage();
 loadsCardsListFromItemsController();
 console.log(productController.products)
+
+

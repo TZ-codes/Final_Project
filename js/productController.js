@@ -14,11 +14,15 @@ class ProductController {
         };
         this.products.push(product);
     };
+    
+    loadItemsFromLocalStorage = () => {
+        const storageProducts = localStorage.getItem('products')
+        if (storageProducts) {
+            this.products = JSON.parse(storageProducts);
+        };
+    };
 };
 
-const loadItemsFromLocalStorage = () => {
-    const storageProducts = localStorage.getItem('products')
-    if (storageProducts) {
-        const products = JSON.parse(storageProducts);
-    }
-};
+
+
+export {ProductController};

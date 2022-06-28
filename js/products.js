@@ -18,10 +18,10 @@ const localStorageSampleData = () => {
     // console.log('localStorageSampleData')
     if(!localStorage.getItem('products')){
         const sampleProduct = [{'name':'Loremmmmm',
-        'img':'../images/gymEquipment/4kg-Kettlebell.png',
+        'imageURL':'./images/gymEquipment/4kg-Kettlebell.png',
         'description':'Lorem ipsum dolor sit amet'},
         {'name':'Lorem',
-        'img':'../images/gymEquipment/10kg-dumbbell.png',
+        'imageURL':'./images/gymEquipment/10kg-dumbbell.png',
         'description':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, repellat!'}] 
         // console.log(sampleProduct);
         localStorage.setItem('products', JSON.stringify(sampleProduct));

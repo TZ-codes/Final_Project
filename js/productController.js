@@ -29,6 +29,25 @@ class ProductController {
             products.forEach(product => this.products.push(product));
         };
     };
+
+    save({name, description, imageUrl, createdAt}){
+        const data = { name,  description, imageUrl, createdAt};
+
+        fetch('http://localhost:8080/product', {
+        method: 'POST', // or 'PUT'
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+        })
+        .then(response => response.json())
+        .then(data => {
+        console.log('Success:', data);
+        })
+        .catch((error) => {
+        console.error('Error:', error);
+        });
+    }
 };
 
 export {ProductController};

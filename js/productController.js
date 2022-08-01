@@ -21,7 +21,7 @@ class ProductController {
             localStorage.setItem('products', JSON.stringify(products));
         };
 
-        uploadProduct();
+        this.save(name, description, imageURL, createdAt);
     };
     
     loadItemsFromLocalStorage = () => {
@@ -35,10 +35,17 @@ class ProductController {
     save({name, description, imageUrl, createdAt}){
         const data = { name,  description, imageUrl, createdAt};
 
-        fetch('http://localhost:8080/product', {
+        fetch('http://localhost:8080/product/', {
         method: 'POST', // or 'PUT'
+        // mode: "no-cors",
+        // cache: 'no-cache',
+        // credentials: "same-origin",
         headers: {
             'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin' : '*',
+            'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
+            'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token',
+            // 'Access-Control-Allow-Credentials' : 'true',
         },
         body: JSON.stringify(data),
         })
@@ -47,9 +54,29 @@ class ProductController {
         console.log('Success:', data);
         })
         .catch((error) => {
-        console.error('Error:', error);
+        console.log('Error:', error);
         });
     };
+
+    update({name, description, imageUrl}){
+        //TODO implement this method
+        this.name = name;
+        this.description = description;
+        this.imageURL = imageURL;
+    }
+
+    delete(itemId){
+        //TODO implement this method
+        product.delete(itemId)
+        
+    }
+
+    findById(itemId){
+        //TODO implement this method
+        product.findById(itemId);
+    }
+
+    
 };
 
 export {ProductController};

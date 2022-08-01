@@ -20,6 +20,8 @@ class ProductController {
             products.push(product);
             localStorage.setItem('products', JSON.stringify(products));
         };
+
+        uploadProduct();
     };
     
     loadItemsFromLocalStorage = () => {
@@ -47,7 +49,7 @@ class ProductController {
         .catch((error) => {
         console.error('Error:', error);
         });
-    }
+    };
 };
 
 export {ProductController};

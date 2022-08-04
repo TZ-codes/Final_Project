@@ -22,6 +22,9 @@ class ProductController {
         };
 
         this.save(name, description, imageURL, createdAt);
+        // this.delete(20);
+        // let id = 19;
+        // this.update(id, name, description, imageURL);
     };
     
     loadItemsFromLocalStorage = () => {
@@ -54,28 +57,25 @@ class ProductController {
         });
     };
 
-    update(name, description, imageUrl){
-        //TODO implement this method
-        const data = { name,  description, imageUrl}
-        fetch('http://localhost:8080/product/', {
-        method: 'PUT', 
-        body: JSON.stringify(data),
+    update(id, name, description, imageUrl){
+        const data = {id, name,  description, imageUrl};
+        console.log(data);
+        const url = `http://localhost:8080/product/${id}`;
+        fetch(url, {
+        method: 'PUT',
         headers: {
-            'Content-Type': 'application/json; charset=UTF-8',
-            'Access-Control-Allow-Origin' : '*',
-            'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
-            'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token',
-            'Access-Control-Allow-Credentials' : 'true',
-        }
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
         })
         .then(response => response.json())
         .then(data => {
         console.log('Success:', data);
         })
         .catch((error) => {
-        console.log('Error:', error);
+        console.error('Error:', error);
         });
-    }
+        }
 
     delete(productId){
         //TODO implement this method

@@ -32,20 +32,16 @@ class ProductController {
         };
     };
 
-    save({name, description, imageUrl, createdAt}){
+    save(name, description, imageUrl, createdAt){
         const data = { name,  description, imageUrl, createdAt};
-
         fetch('http://localhost:8080/product/', {
-        method: 'POST', // or 'PUT'
-        // mode: "no-cors",
-        // cache: 'no-cache',
-        // credentials: "same-origin",
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin' : '*',
             'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
             'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token',
-            // 'Access-Control-Allow-Credentials' : 'true',
+            'Access-Control-Allow-Credentials' : 'true',
         },
         body: JSON.stringify(data),
         })
@@ -58,26 +54,49 @@ class ProductController {
         });
     };
 
-    update({name, description, imageUrl}){
+    update(name, description, imageUrl){
         //TODO implement this method
-        this.name = name;
-        this.description = description;
-        this.imageURL = imageURL;
+        const data = { name,  description, imageUrl}
+        fetch('http://localhost:8080/product/', {
+        method: 'PUT', 
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json; charset=UTF-8',
+            'Access-Control-Allow-Origin' : '*',
+            'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
+            'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token',
+            'Access-Control-Allow-Credentials' : 'true',
+        }
+        })
+        .then(response => response.json())
+        .then(data => {
+        console.log('Success:', data);
+        })
+        .catch((error) => {
+        console.log('Error:', error);
+        });
     }
 
-    delete(itemId){
+    delete(productId){
         //TODO implement this method
-        product.delete(itemId)
-        
-    }
+        fetch('http://localhost:8080/product/' + productId, {
+        method: 'DELETE', 
+    })
+}
 
-    findById(itemId){
+    findById(productId){
         //TODO implement this method
-        product.findById(itemId);
-    }
+        fetch('http://localhost:8080/product/' + productId)
+        .then(response => response.json())
+        .then(data => {
+        console.log('Success:', data);
+        })
+        .catch((error) => {
+        console.log('Error:', error);
+        }); 
+    };
 
-    
-};
+}
 
 export {ProductController};
 

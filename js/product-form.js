@@ -16,11 +16,10 @@ newProductForm.addEventListener('submit', (event) => {
     const newURL = newProductImage.value; 
     const createdAt = new Date();
 
-    //`./images/gymEquipment/${imgName}.png`
-    // const imgName = 
-    //assign an image to imgName!!!
-
     productController.addItem(name, description, newURL, createdAt);
+    // productController.update(name, description, newURL);
+    // productController.delete(productId);
+    // productController.findById(productId);
 
     newProductName.value = '';
     newProductDescription.value = '';

@@ -29,7 +29,7 @@ const localStorageSampleData = () => {
 };
 
 const loadsCardsListFromItemsController = () => {
-    console.log(productController.products.length)
+    // console.log(productController.products.length)
     for(let i = 0; i < productController.products.length; i++) {
         const product = productController.products[i];
         addProductCard(product);

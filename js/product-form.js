@@ -15,7 +15,7 @@ newProductForm.addEventListener('submit', (event) => {
     const description = newProductDescription.value;
     const newURL = newProductImage.value; 
     const createdAt = new Date();
-
+    console.log(newURL)
     productController.addItem(name, description, newURL, createdAt);
     // productController.update(name, description, newURL);
     // productController.delete(productId);
